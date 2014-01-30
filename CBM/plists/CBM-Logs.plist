@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pilots_update_0</key>
+	<string>kYes</string>
+	<key>teams_update_0</key>
+	<string>kYes</string>
+	<key>rating_update_0</key>
+	<string>kYes</string>
+	<key>steps_update_0</key>
+	<string>kYes</string>
+	<key>steps_rows_update_0</key>
+	<string>kYes</string>
+	<key>pilots_update_1</key>
+	<string>kYes</string>
+	<key>teams_update_1</key>
+	<string>kYes</string>
+	<key>rating_update_1</key>
+	<string>kYes</string>
+	<key>steps_update_1</key>
+	<string>kYes</string>
+	<key>steps_rows_update_1</key>
+	<string>kYes</string>
+	<key>pilots_update_2</key>
+	<string>kYes</string>
+	<key>teams_update_2</key>
+	<string>kYes</string>
+	<key>rating_update_2</key>
+	<string>kYes</string>
+	<key>steps_update_2</key>
+	<string>kYes</string>
+	<key>steps_rows_update_2</key>
+	<string>kYes</string>
+	<key>pilots_update_3</key>
+	<string>kYes</string>
+	<key>teams_update_3</key>
+	<string>kYes</string>
+	<key>rating_update_3</key>
+	<string>kYes</string>
+	<key>steps_update_3</key>
+	<string>kYes</string>
+	<key>steps_rows_update_3</key>
+	<string>kYes</string>
+	<key>pilots_update_4</key>
+	<string>kYes</string>
+	<key>teams_update_4</key>
+	<string>kYes</string>
+	<key>rating_update_4</key>
+	<string>kYes</string>
+	<key>steps_update_4</key>
+	<string>kYes</string>
+	<key>steps_rows_update_4</key>
+	<string>kYes</string>
+	<key>pilots_update_5</key>
+	<string>kYes</string>
+	<key>teams_update_5</key>
+	<string>kYes</string>
+	<key>rating_update_5</key>
+	<string>kYes</string>
+	<key>steps_update_5</key>
+	<string>kYes</string>
+	<key>steps_rows_update_5</key>
+	<string>kYes</string>
+</dict>
+</plist>

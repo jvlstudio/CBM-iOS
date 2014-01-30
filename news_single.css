@@ -1,0 +1,16 @@
+* {
+	font-family: Arial;
+}
+
+body {
+	background: #DEE1E1;
+	color: #444;
+}
+
+a, a:active {
+	color: #038B51;
+}
+
+p {
+	padding: 10px 0px;
+}

@@ -7,13 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@class ViewController;
+@class HomeSimple;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, PPRevealSideViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) HomeSimple *viewController;
+@property (strong, nonatomic) PPRevealSideViewController *revealSideViewController;
 
-@property (strong, nonatomic) ViewController *viewController;
+#pragma mark -
+#pragma mark Opening Methods
+
+- (UIViewController*) openingWithAnimation;
+- (UIViewController*) openingWithoutAnimation;
 
 @end

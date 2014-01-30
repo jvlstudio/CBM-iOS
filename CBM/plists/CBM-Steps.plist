@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>num_step</key>
+		<string>1</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+		<key>date</key>
+		<string>2013-4-07</string>
+		<key>date_day</key>
+		<string>07</string>
+		<key>date_month</key>
+		<string>ABR</string>
+		<key>date_week</key>
+		<string>Dom</string>
+		<key>city_name</key>
+		<string>São Paulo</string>
+		<key>address</key>
+		<string>Autódromo Internacional José Carlos Pace (Interlagos)</string>
+		<key>slug</key>
+		<string>sao-paulo</string>
+		<key>duration</key>
+		<string>32:08.559</string>
+		<key>duration_pilot</key>
+		<string>Ricardo Maurício</string>
+		<key>best_lap</key>
+		<string>1:49.993</string>
+		<key>best_lap_pilot</key>
+		<string>Ricardo Maurício</string>
+	</dict>
+	<dict>
+		<key>num_step</key>
+		<string>2</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+		<key>date</key>
+		<string>2013-4-21</string>
+		<key>date_day</key>
+		<string>21</string>
+		<key>date_month</key>
+		<string>ABR</string>
+		<key>date_week</key>
+		<string>Dom</string>
+		<key>city_name</key>
+		<string>Brasília</string>
+		<key>address</key>
+		<string>Autódromo Internacional Nelson Piquet</string>
+		<key>slug</key>
+		<string>brasilia</string>
+		<key>duration</key>
+		<string>31:14.104</string>
+		<key>duration_pilot</key>
+		<string>Galid Osman</string>
+		<key>best_lap</key>
+		<string>1:02.887</string>
+		<key>best_lap_pilot</key>
+		<string>Denis Navarro</string>
+	</dict>
+	<dict>
+		<key>num_step</key>
+		<string>3</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+		<key>date</key>
+		<string>2013-7-21</string>
+		<key>date_day</key>
+		<string>21</string>
+		<key>date_month</key>
+		<string>JUL</string>
+		<key>date_week</key>
+		<string>Dom</string>
+		<key>city_name</key>
+		<string>São Paulo</string>
+		<key>address</key>
+		<string>Autódromo Internacional José Carlos Pace (Interlagos)</string>
+		<key>slug</key>
+		<string>sao-paulo</string>
+		<key>duration</key>
+		<string>32:08.559</string>
+		<key>duration_pilot</key>
+		<string>Ricardo Maurício</string>
+		<key>best_lap</key>
+		<string>1:49.993</string>
+		<key>best_lap_pilot</key>
+		<string>Ricardo Maurício</string>
+	</dict>
+	<dict>
+		<key>num_step</key>
+		<string>4</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+		<key>date</key>
+		<string>2013-8-25</string>
+		<key>date_day</key>
+		<string>25</string>
+		<key>date_month</key>
+		<string>AGO</string>
+		<key>date_week</key>
+		<string>Dom</string>
+		<key>city_name</key>
+		<string>Curitiba</string>
+		<key>address</key>
+		<string>Autódromo Internacional de Curitiba - AIC</string>
+		<key>slug</key>
+		<string>curitiba</string>
+		<key>duration</key>
+		<string>31:44.116</string>
+		<key>duration_pilot</key>
+		<string>André Bragantini</string>
+		<key>best_lap</key>
+		<string>1:28.103</string>
+		<key>best_lap_pilot</key>
+		<string>Alceu Feldmann</string>
+	</dict>
+	<dict>
+		<key>num_step</key>
+		<string>5</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+		<key>date</key>
+		<string>2013-9-29</string>
+		<key>date_day</key>
+		<string>29</string>
+		<key>date_month</key>
+		<string>SET</string>
+		<key>date_week</key>
+		<string>Dom</string>
+		<key>city_name</key>
+		<string>Brasília</string>
+		<key>address</key>
+		<string>Autódromo Internacional Nelson Piquet</string>
+		<key>slug</key>
+		<string>brasilia</string>
+		<key>duration</key>
+		<string>31:14.104</string>
+		<key>duration_pilot</key>
+		<string>Galid Osman</string>
+		<key>best_lap</key>
+		<string>1:02.887</string>
+		<key>best_lap_pilot</key>
+		<string>Denis Navarro</string>
+	</dict>
+	<dict>
+		<key>num_step</key>
+		<string>6</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+		<key>date</key>
+		<string>2013-10-27</string>
+		<key>date_day</key>
+		<string>27</string>
+		<key>date_month</key>
+		<string>OUT</string>
+		<key>date_week</key>
+		<string>Dom</string>
+		<key>city_name</key>
+		<string>Tarumã</string>
+		<key>address</key>
+		<string>Autódromo Internacional de Tarumã</string>
+		<key>slug</key>
+		<string>taruma</string>
+		<key>duration</key>
+		<string>32:20.650</string>
+		<key>duration_pilot</key>
+		<string>Ricardo Zonta</string>
+		<key>best_lap</key>
+		<string>1:09.898</string>
+		<key>best_lap_pilot</key>
+		<string>Gustavo Martins</string>
+	</dict>
+	<dict>
+		<key>num_step</key>
+		<string>7</string>
+		<key>is_ended</key>
+		<string>kNo</string>
+		<key>date</key>
+		<string>2013-11-17</string>
+		<key>date_day</key>
+		<string>17</string>
+		<key>date_month</key>
+		<string>NOV</string>
+		<key>date_week</key>
+		<string>Dom</string>
+		<key>city_name</key>
+		<string>Cascavel</string>
+		<key>address</key>
+		<string>Autódromo de Cascavel Zilmar Beux</string>
+		<key>slug</key>
+		<string>cascavel</string>
+		<key>duration</key>
+		<string>--</string>
+		<key>duration_pilot</key>
+		<string>--</string>
+		<key>best_lap</key>
+		<string>--</string>
+		<key>best_lap_pilot</key>
+		<string>--</string>
+	</dict>
+	<dict>
+		<key>num_step</key>
+		<string>8</string>
+		<key>is_ended</key>
+		<string>kNo</string>
+		<key>date</key>
+		<string>2013-12-01</string>
+		<key>date_day</key>
+		<string>01</string>
+		<key>date_month</key>
+		<string>DEZ</string>
+		<key>date_week</key>
+		<string>Dom</string>
+		<key>city_name</key>
+		<string>Curitiba</string>
+		<key>address</key>
+		<string>Autódromo Internacional de Curitiba - AIC</string>
+		<key>slug</key>
+		<string>curitiba</string>
+		<key>duration</key>
+		<string>--</string>
+		<key>duration_pilot</key>
+		<string>--</string>
+		<key>best_lap</key>
+		<string>--</string>
+		<key>best_lap_pilot</key>
+		<string>--</string>
+	</dict>
+</array>
+</plist>

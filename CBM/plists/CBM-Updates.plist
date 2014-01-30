@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>key</key>
+		<string>update_0</string>
+		<key>date</key>
+		<string>2013-04-07 18:00</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+	</dict>
+	<dict>
+		<key>key</key>
+		<string>update_1</string>
+		<key>date</key>
+		<string>2013-04-21 18:00</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+	</dict>
+	<dict>
+		<key>key</key>
+		<string>update_2</string>
+		<key>date</key>
+		<string>2013-07-21 18:00</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+	</dict>
+	<dict>
+		<key>key</key>
+		<string>update_3</string>
+		<key>date</key>
+		<string>2013-08-25 18:00</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+	</dict>
+	<dict>
+		<key>key</key>
+		<string>update_4</string>
+		<key>date</key>
+		<string>2013-09-29 18:00</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+	</dict>
+	<dict>
+		<key>key</key>
+		<string>update_5</string>
+		<key>date</key>
+		<string>2013-10-27 18:00</string>
+		<key>is_ended</key>
+		<string>kYes</string>
+	</dict>
+	<dict>
+		<key>key</key>
+		<string>update_6</string>
+		<key>date</key>
+		<string>2013-11-17 18:00</string>
+		<key>is_ended</key>
+		<string>kNo</string>
+	</dict>
+	<dict>
+		<key>key</key>
+		<string>update_7</string>
+		<key>date</key>
+		<string>2013-12-01 18:00</string>
+		<key>is_ended</key>
+		<string>kNo</string>
+	</dict>
+</array>
+</plist>

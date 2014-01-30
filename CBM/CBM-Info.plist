@@ -5,11 +5,28 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>InRace</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>icon_58</string>
+				<string>icon_80</string>
+				<string>icon_29</string>
+				<string>icon_120</string>
+				<string>icon_114.png</string>
+				<string>icon_57.png</string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>br.com.ikomm.apps.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>br.com.ikomm.apps.CBM</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -17,21 +34,44 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb545799515482272</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.4</string>
+	<key>FacebookAppID</key>
+	<string>545799515482272</string>
 	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NeoSansMI.ttf</string>
+		<string>NeoTechStdMI.otf</string>
+	</array>
+	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarHidden</key>
+	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>

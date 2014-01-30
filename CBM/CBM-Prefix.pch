@@ -9,6 +9,26 @@
 #endif
 
 #ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
+
+#include <stdlib.h>
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
+
+#import "CBMNavigationController.h"
+#import "UIImageView+WebCache.h"
+#import "UILabel+VerticalAlign.h"
+#import "UIScrollView+SVInfiniteScrolling.h"
+#import "UIScrollView+SVPullToRefresh.h"
+
+#import "SVPullToRefresh.h"
+#import "PPRevealSideViewController.h"
+
+#import "SBJSON.h"
+
+#import "Constants.h"
+#import "FRTools.h"
+#import "UpdateData.h"
+
 #endif

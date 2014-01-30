@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ratingCell" id="3" userLabel="pilot" customClass="RatingCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3" id="tRV-hz-0x7">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="cell_rating_pilot.png" id="6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="16">
+                        <rect key="frame" x="73" y="12" width="20" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pilot Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="17">
+                        <rect key="frame" x="101" y="11" width="150" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Team Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="18">
+                        <rect key="frame" x="101" y="31" width="150" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Car Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="20">
+                        <rect key="frame" x="101" y="45" width="150" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="21">
+                        <rect key="frame" x="274" y="15" width="41" height="49"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                        <color key="textColor" red="0.95686280729999995" green="0.8078432083" blue="0.20000001789999999" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="25">
+                        <rect key="frame" x="9" y="16" width="54" height="47"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="carName" destination="20" id="26"/>
+                <outlet property="numberCar" destination="16" id="33"/>
+                <outlet property="numberRanking" destination="25" id="27"/>
+                <outlet property="pilotName" destination="17" id="28"/>
+                <outlet property="points" destination="21" id="29"/>
+                <outlet property="teamName" destination="18" id="30"/>
+            </connections>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ratingTeamCell" id="5" userLabel="team" customClass="RatingTeamCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5" id="jbs-L0-mya">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="22">
+                        <rect key="frame" x="264" y="15" width="56" height="49"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                        <color key="textColor" red="0.21496328240000001" green="0.64624521680000002" blue="0.30790431899999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Shield Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="23">
+                        <rect key="frame" x="69" y="15" width="174" height="49"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="points" destination="22" id="31"/>
+                <outlet property="shieldName" destination="23" id="32"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cell_rating_pilot.png" width="320" height="70"/>
+    </resources>
+</document>

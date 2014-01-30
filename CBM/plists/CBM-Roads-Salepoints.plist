@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<string>1</string>
+		<key>name</key>
+		<string>(DF) Distrito Federal</string>
+		<key>salepoints</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>FNAC Park Shopping</string>
+				<key>address</key>
+				<string>SAI/SO Área, 6580</string>
+				<key>city</key>
+				<string>Brasília/DF</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>2</string>
+		<key>name</key>
+		<string>(GO) Goiás</string>
+		<key>salepoints</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>FNAC Shopping Flamboyant</string>
+				<key>address</key>
+				<string>Av. Jamel Cecílio, 3300 - Jardim Goiás</string>
+				<key>city</key>
+				<string>Goiás/GO</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>3</string>
+		<key>name</key>
+		<string>(MG) Minas Gerais</string>
+		<key>salepoints</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Chevrolet Hall</string>
+				<key>address</key>
+				<string>Av. Nossa Senhora do Carmo, 230 - Savassi</string>
+				<key>city</key>
+				<string>Belo Horizonte/MG</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>FNAC BH Shopping</string>
+				<key>address</key>
+				<string>Rod. BR-356, 3049 - MA 61-62 - Belvedere</string>
+				<key>city</key>
+				<string>Belo Horizonte/MG</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Só Marcas Outlet</string>
+				<key>address</key>
+				<string>Av. Cardeal Eugênio Pacelli, 1336 - Contagem</string>
+				<key>city</key>
+				<string>Belo Horizonte/MG</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>4</string>
+		<key>name</key>
+		<string>(PR) Paraná</string>
+		<key>salepoints</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>FNAC Curitiba</string>
+				<key>address</key>
+				<string>Rua Prof. Pedro Viriato Parigot de Souza, 600 - Barigui</string>
+				<key>city</key>
+				<string>Curitiba/PR</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>5</string>
+		<key>name</key>
+		<string>(RJ) Rio de Janeiro</string>
+		<key>salepoints</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Citibank Hall</string>
+				<key>address</key>
+				<string>Av. Ayrton Senna, 3000 - Barra da Tijuca</string>
+				<key>city</key>
+				<string>Rio de Janeiro/RJ</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>FNAC Barra Shopping</string>
+				<key>address</key>
+				<string>Av. das Américas, 4666 - Loja B101 - Barra da Tijuca</string>
+				<key>city</key>
+				<string>Rio de Janeiro/RJ</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Multipoint</string>
+				<key>address</key>
+				<string>Rua General Urquisa, 67 - Loja B - Leblon</string>
+				<key>city</key>
+				<string>Rio de Janeiro/RJ</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva MegaStore NorteShopping</string>
+				<key>address</key>
+				<string>Av. Dom Helder Câmara, 5080 - Caxambi</string>
+				<key>city</key>
+				<string>Rio de Janeiro/RJ</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva MegaStore Shopping RioSul</string>
+				<key>address</key>
+				<string>Av. Lauro Muller, 116 - Botafogo</string>
+				<key>city</key>
+				<string>Rio de Janeiro/RJ</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Shell Santa Cruz</string>
+				<key>address</key>
+				<string>Rua Felipe Cardoso, 1975 - Santa Cruz</string>
+				<key>city</key>
+				<string>Rio de Janeiro/RJ</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Burgão Jacarepaguá</string>
+				<key>address</key>
+				<string>Estrada dos Bandeirantes, 3300 - Curicica</string>
+				<key>city</key>
+				<string>Rio de Janeiro/RJ</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>6</string>
+		<key>name</key>
+		<string>(RS) Rio Grande do Sul</string>
+		<key>salepoints</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string> Multisom</string>
+				<key>address</key>
+				<string>Rua dos Andradas, 1001 - Centro</string>
+				<key>city</key>
+				<string>Porto Alegre/RS</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>My Ticket Mega Shopping Centro</string>
+				<key>address</key>
+				<string>Rua dos Andradas, 1425 - Loja 69 - Centro</string>
+				<key>city</key>
+				<string>Porto Alegre/RS</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>FNAC Porto Alegre</string>
+				<key>address</key>
+				<string>Av. Diário de Notícias, 300 - Cristal</string>
+				<key>city</key>
+				<string>Porto Alegre/RS</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>My Ticket Moinhos</string>
+				<key>address</key>
+				<string>Rua Padre Chagas, 327</string>
+				<key>city</key>
+				<string>Porto Alegre/RS</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>7</string>
+		<key>name</key>
+		<string>(SP) Grande São Paulo</string>
+		<key>salepoints</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Credicard Hall</string>
+				<key>address</key>
+				<string>Av. das Nações Unidas, 17955 - Santo Amaro</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Fast Shop - Shopping JK</string>
+				<key>address</key>
+				<string>Av. Presidente Juscelino Kubitschek, 2041 - Vila Olímpia</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Fujji Turismo</string>
+				<key>address</key>
+				<string>Rua Escandinávia, 23 - Jd. Barbosa</string>
+				<key>city</key>
+				<string>Guarulhos/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>FNAC MorumbiShopping</string>
+				<key>address</key>
+				<string>Av. Roque Petroni Jr, 1089 - Morumbi</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>FNAC Paulista</string>
+				<key>address</key>
+				<string>Av. Paulista, 901 - Bela Vista</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>FNAC Pinheiros</string>
+				<key>address</key>
+				<string>Praça dos Omaguás, 34 - Pinheiros</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Ipiranga Gravatinha</string>
+				<key>address</key>
+				<string>Av. Portugal, 1756 - Jardim Bela Vista</string>
+				<key>city</key>
+				<string>Santo André/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Ipiranga Portal das Perdizes</string>
+				<key>address</key>
+				<string>Rua Dr. Franco da Rocha, 664 - Esquina com a Av. Sumaré - Perdizes</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Ipiranga São Bernardo</string>
+				<key>address</key>
+				<string>Rua Jurubatuba, 1500 - Centro</string>
+				<key>city</key>
+				<string>São Bernardo do Campo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva MegaStore Shopping Anália Franco</string>
+				<key>address</key>
+				<string>Av. Regente Feijó, 1739 - Jardim Anália Franco</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva MegaStore Shopping Center Norte</string>
+				<key>address</key>
+				<string>Travessa Casalbuono, 120 - Loja 414 - Vila Guilherme</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva MegaStore Shopping Eldorado</string>
+				<key>address</key>
+				<string>Av. Rebouças, 3970 - 1º Piso - Pinheiros</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva Megastore Granja Vianna</string>
+				<key>address</key>
+				<string>Rodovia Raposo Tavares - Km 23 - Lageadinho</string>
+				<key>city</key>
+				<string>Cotia/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva MegaStore Shopping Ibirapuera</string>
+				<key>address</key>
+				<string>Av. Ibirapuera, 3103 - Piso Moema - Moema</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva MegaStore Shopping Iguatemi Alphaville</string>
+				<key>address</key>
+				<string>Alameda Rio Negro, 111 - Piso 2 Loja 301 - Alphaville Industrial</string>
+				<key>city</key>
+				<string>Barueri/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva MegaStore MorumbiShopping</string>
+				<key>address</key>
+				<string>Av. Roque Petroni Jr, 1089 - Morumbi</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva MegaStore Pátio Paulista</string>
+				<key>address</key>
+				<string>Rua Treze de Maio, 1947 - Piso Térreo Paraíso - Paraíso</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Saraiva Megastore Shopping Vila Olímpia</string>
+				<key>address</key>
+				<string>Rua Olimpíadas, 360 - Vila Olímpia</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Skill Idiomas</string>
+				<key>address</key>
+				<string>Av. Goiás, 3141 - Barcelona</string>
+				<key>city</key>
+				<string>São Caetano do Sul/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Teatro Renault</string>
+				<key>address</key>
+				<string>Av. Brigadeiro Luis Antonio, 411 - República</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Teatro do Sesi</string>
+				<key>address</key>
+				<string>Av. Paulista, 1313 - Bela Vista</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Thelles E.Music</string>
+				<key>address</key>
+				<string>Galeria Ouro Fino - Rua Augusta, 2690 - Loja 301 - 2º andar - Bela Vista</string>
+				<key>city</key>
+				<string>São Paulo/SP</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>8</string>
+		<key>name</key>
+		<string>(SP) Interior de São Paulo</string>
+		<key>salepoints</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string> FNAC Campinas</string>
+				<key>address</key>
+				<string>Av. Guilherme de Campos, 500 - Santa Genebra</string>
+				<key>city</key>
+				<string>Campinas/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>FNAC Ribeirão Preto</string>
+				<key>address</key>
+				<string>Av. Coronel Fernando Ferreira Leite, 1540 - Jd. Califórnia</string>
+				<key>city</key>
+				<string>Ribeirão Preto/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Healthy Life</string>
+				<key>address</key>
+				<string>Rua Siqueira Campos, 151 - Vila Sfeir</string>
+				<key>city</key>
+				<string>Indaiatuba/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Óticas Diniz</string>
+				<key>address</key>
+				<string>Rua Floriano Peixoto, 756 - Centro</string>
+				<key>city</key>
+				<string>Itú/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Óticas Diniz</string>
+				<key>address</key>
+				<string>Rua Quinze de Novembro, 142 - Centro</string>
+				<key>city</key>
+				<string>Sorocaba/SP</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Vespoli Tour</string>
+				<key>address</key>
+				<string>Av. Nove de Julho, 2244 - Anhangabaú</string>
+				<key>city</key>
+				<string>Jundiaí/SP</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>9</string>
+		<key>name</key>
+		<string>(SP) Litoral de São Paulo</string>
+		<key>salepoints</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Braun Turismo</string>
+				<key>address</key>
+				<string>Rua Dr. Luis de Faria, 62 - Gonzaga</string>
+				<key>city</key>
+				<string>Santos/SP</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

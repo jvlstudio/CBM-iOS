@@ -8,45 +8,125 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "HomeSimple.h"
+#import "Opening.h"
 
 @implementation AppDelegate
 
+@synthesize revealSideViewController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = PP_AUTORELEASE([[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]);
+    
+    // Let the device know we want to receive push notifications
+    [Parse setApplicationId:PARSE_APP_ID
+                  clientKey:PARSE_APP_SECRET];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+	[application registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+	// local notifications..
+    [application cancelAllLocalNotifications];
+    
+    // facebook
+    [PFFacebookUtils initializeFacebook];
+    
+    // Clear application badge when app launches
+    application.applicationIconBadgeNumber = 0;
+    
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = [self openingWithAnimation];
     [self.window makeKeyAndVisible];
+    
+    // return..
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
+#pragma mark -
+#pragma mark Opening Methods
+
+- (UIViewController*) openingWithAnimation
 {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    Opening *opening = [[Opening alloc] initWithNibName:@"Opening" bundle:nil];
+    return opening;
+}
+- (UIViewController*) openingWithoutAnimation
+{
+    // RevealSlideController..
+    self.viewController         = [[HomeSimple alloc] initCBMViewController:@"HomeSimple"];
+    [self.viewController setMenuButton];
+    CBMNavigationController *nav = [[CBMNavigationController alloc] initWithCBMControllerAndLeftButton:self.viewController title:TITLE_HOME];
+    
+    revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:nav];
+    revealSideViewController.delegate = self;
+    
+    PP_RELEASE(self.viewController);
+    PP_RELEASE(nav);
+    
+    return revealSideViewController;
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
+#pragma mark -
+#pragma mark Facebook Methods
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    return [PFFacebookUtils handleOpenURL:url];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    return [PFFacebookUtils handleOpenURL:url];
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
+#pragma mark -
+#pragma mark UIDevice Methods
+
+- (BOOL)checkIsDeviceVersionHigherThanRequiredVersion:(NSString *)requiredVersion
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
+    
+    if ([currSysVer compare:requiredVersion options:NSNumericSearch] != NSOrderedAscending)
+    {
+        return YES;
+    }
+    
+    return NO;
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
+#pragma mark -
+#pragma mark APNS Configuration
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    NSLog(@"Local Notification: App está ativo.");
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken
+{
+    [PFPush storeDeviceToken:devToken]; // Send parse the device token
+    // Subscribe this user to the broadcast channel, ""
+    [PFPush subscribeToChannelInBackground:@"" block:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Successfully subscribed to the broadcast channel.");
+        } else {
+            NSLog(@"Failed to subscribe to the broadcast channel.");
+        }
+    }];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+#if !TARGET_IPHONE_SIMULATOR
+	NSLog(@"Error in registration. Error: %@", error);
+#endif
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [PFPush handlePush:userInfo];
 }
 
 @end
