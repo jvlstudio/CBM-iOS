@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Webservice.h"
 
 @interface CBMViewController : UIViewController
 {
     NSUserDefaults *defaults;
+    Webservice *webservice;
 }
 
+@property (nonatomic, strong) Webservice *webservice;
 @property (nonatomic, strong) UIImageView *backgroundTransparent;
 
 #pragma mark -

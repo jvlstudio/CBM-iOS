@@ -77,8 +77,8 @@
     // plists
     tools       = [[FRTools alloc] initWithTools];
     update      = [[UpdateData alloc] initWithRootViewController:self];
-    plist       = [tools propertyListRead:PLIST_STEPS_ROWS];
-    tableData   = [plist objectAtIndex:([[stepDict objectForKey:KEY_NUM_STEP] intValue]-1)];
+    //plist       = [tools propertyListRead:PLIST_STEPS_ROWS];
+    tableData   = [webservice wtvisionRowsForStep:[[stepDict objectForKey:KEY_NUM_STEP] integerValue] type:kClassProofs]; //[plist objectAtIndex:([[stepDict objectForKey:KEY_NUM_STEP] intValue]-1)];
     
     // data..
     dataTrain1  = [tableData objectAtIndex:TABLE_TRAIN_1];
@@ -392,6 +392,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     NSDictionary *obj;
     NSDictionary *pilotDict;
     // t1..
@@ -429,6 +430,7 @@
     
     Pilot *c = [[Pilot alloc] initWithDictionary:pilotDict andBackButton:YES];
     [[self navigationController] pushViewController:c animated:YES];
+    */
 }
 
 #pragma mark -

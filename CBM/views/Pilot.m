@@ -24,22 +24,7 @@
 @synthesize tableData;
 @synthesize tableCarData;
 @synthesize activity;
-@synthesize tweetContent;
-@synthesize tweetView;
-@synthesize labelName;
-@synthesize labelRanking;
-@synthesize labelRating;
-@synthesize labelPoints;
-@synthesize imgViewShield;
-@synthesize pilotBg;
-@synthesize sectionView;
-@synthesize btBio;
-@synthesize btCar;
-@synthesize btStatistic;
 @synthesize pilotImage;
-@synthesize bioView;
-@synthesize table;
-@synthesize tableCar;
 
 #pragma mark -
 #pragma mark Init Methods
@@ -71,10 +56,18 @@
     tools       = [[FRTools alloc] initWithTools];
     update      = [[UpdateData alloc] initWithRootViewController:self];
     
-    // vars..
-    NSString *rating    = [NSString stringWithFormat:@"%@", [plist objectForKey:KEY_NUMBER]];
-    NSString *points    = [NSString stringWithFormat:@"%@", [plist objectForKey:KEY_POINTS]];
-    NSString *ranking   = [NSString stringWithFormat:@"%@", [plist objectForKey:KEY_RANKING]];
+    // ws..
+    NSDictionary *ratingArr = [webservice rating];
+    NSArray *pilotsArr      = [ratingArr objectForKey:@"pilots"];
+    NSString *pPoints   = @"";
+    NSString *pPos      = @"";
+    
+    for (NSDictionary *pilotSingle in pilotsArr) {
+        if ([[pilotSingle objectForKey:KEY_NUMBER] isEqualToString:[plist objectForKey:KEY_NUMBER]]){
+            pPoints = [pilotSingle objectForKey:KEY_POINTS];
+            pPos = [pilotSingle objectForKey:KEY_POSITION];
+        }
+    }
     
     // data
     tableData           = [plist objectForKey:KEY_META];
@@ -82,9 +75,9 @@
     
     // labels
     [self configureLabel:labelName withText:[plist objectForKey:KEY_NAME] andSize:25.0 andColor:COLOR_WHITE];
-    [self configureLabel:labelRating withText:rating andSize:27.0 andColor:COLOR_GREEN];
-    [self configureLabel:labelPoints withText:points andSize:27.0 andColor:COLOR_WHITE];
-    [self configureLabel:labelRanking withText:ranking andSize:27.0 andColor:COLOR_WHITE];
+    [self configureLabel:labelPosition withText:pPos andSize:27.0 andColor:COLOR_WHITE];
+    [self configureLabel:labelPoints withText:pPoints andSize:27.0 andColor:COLOR_WHITE];
+    [self configureLabel:labelNumber withText:[plist objectForKey:KEY_NUMBER] andSize:27.0 andColor:COLOR_GREEN];
     if ([[plist objectForKey:KEY_BIO] length] > 5)
         [bioView setText:[plist objectForKey:KEY_BIO]];
     else
@@ -199,8 +192,14 @@
         else
             bgUp = [[UIImageView alloc] initWithImage:[UIImage imageNamed:BG_PILOT_DARK]];
         // label..
+        NSString *points = @"";
+        if ([[obj objectForKey:KEY_KEY] isEqualToString:KEY_POINTS])
+            points = [labelPoints text];
+        else
+            points = [obj objectForKey:KEY_VALUE];
+        
         [self configureLabel:[cell labelKey] withText:[[obj objectForKey:KEY_LABEL] uppercaseString] andSize:25.0 andColor:COLOR_GREY_LIGHT];
-        [self configureLabel:[cell labelValue] withText:[obj objectForKey:KEY_VALUE] andSize:40.0 andColor:COLOR_GREY_LIGHT];
+        [self configureLabel:[cell labelValue] withText:points andSize:40.0 andColor:COLOR_GREY_LIGHT];
     }
     // pilot car cell..
     else {

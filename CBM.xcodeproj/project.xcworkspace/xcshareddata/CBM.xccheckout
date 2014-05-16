@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4ADF75D8-1CF6-4D8B-94CC-F017E2746370</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CBM</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>57AAC0F7-BCD8-4599-BAAB-4A3D0EC5B55D</key>
+		<string>https://github.com/felipericieri/ios.frameworks.git</string>
+		<key>FC1AD77F-4F5C-4F5C-9F0C-2BE36D4E5811</key>
+		<string>https://github.com/ikommdigital/ios.CBM.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CBM.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>57AAC0F7-BCD8-4599-BAAB-4A3D0EC5B55D</key>
+		<string>../../../../frameworks</string>
+		<key>FC1AD77F-4F5C-4F5C-9F0C-2BE36D4E5811</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ikommdigital/ios.CBM.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FC1AD77F-4F5C-4F5C-9F0C-2BE36D4E5811</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FC1AD77F-4F5C-4F5C-9F0C-2BE36D4E5811</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CBM</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>57AAC0F7-BCD8-4599-BAAB-4A3D0EC5B55D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>frameworks</string>
+		</dict>
+	</array>
+</dict>
+</plist>

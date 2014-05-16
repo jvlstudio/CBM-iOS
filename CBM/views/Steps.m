@@ -56,7 +56,7 @@
     tools       = [[FRTools alloc] initWithTools];
     update      = [[UpdateData alloc] initWithRootViewController:self];
     
-    tableData = [tools propertyListRead:PLIST_STEPS];
+    tableData = [webservice steps]; //[tools propertyListRead:PLIST_STEPS];
     [table setTableHeaderView:tableHeader];
 }
 
@@ -67,17 +67,14 @@
 {
     return 70.0;
 }
-
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [tableData count];
 }
-
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // xib
@@ -144,9 +141,9 @@
     
 	return cell;
 }
-
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     // update..
     selectedIndex = indexPath;
     if ([update isReadyToRequestUpdateForKey:LOG_UPDATE_STEPS_ROWS])
@@ -157,6 +154,18 @@
     else {
         [self pushWithContent];
     }
+    */
+    UpdateData *up = [[UpdateData alloc] initWithRootViewController:self];
+    NSDictionary *obj = [tableData objectAtIndex:indexPath.row];
+    [up sync:@"Atualizando..."];
+    [webservice wtvisionDataForStep:[[obj objectForKey:KEY_NUM_STEP] integerValue] didSucceed:^{
+        [up syncEnd:@""];
+        StepsSingle *vc = [[StepsSingle alloc] initWithDictionary:obj andBackButton:YES];
+        [[self navigationController] pushViewController:vc animated:YES];
+    } didFail:^{
+        [up syncEnd:@""];
+        [tools dialogWithMessage:@"Não foi possível conectar-se a internet para carregar os resultados dessa etapa. Por favor, verifique sua conexão e tente novamente." title:@"Sem conexão"];
+    }];
 }
 
 #pragma mark -

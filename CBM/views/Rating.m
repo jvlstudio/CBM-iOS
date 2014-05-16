@@ -68,10 +68,10 @@ typedef enum RatingCategory : NSInteger
     tools       = [[FRTools alloc] initWithTools];
     update      = [[UpdateData alloc] initWithRootViewController:self];
     
-    plist       = [tools propertyListRead:PLIST_RATING];
-    pilotsData  = [plist objectForKey:PLIST_KEY_PILOTS];
-    shieldsData = [plist objectForKey:PLIST_KEY_SHIELDS];
-    teamsData   = [plist objectForKey:PLIST_KEY_TEAMS];
+    plist       = [webservice rating]; //[tools propertyListRead:PLIST_RATING];
+    pilotsData  = [plist objectForKey:@"pilots"];
+    shieldsData = [plist objectForKey:@"shields"];
+    teamsData   = [NSArray array]; //[plist objectForKey:PLIST_KEY_TEAMS];
     
     // frames..
     CGRect framePilots  = pilotsTable.frame;
@@ -270,12 +270,10 @@ typedef enum RatingCategory : NSInteger
 {
     return 69.0;
 }
-
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // pilots..
@@ -288,7 +286,6 @@ typedef enum RatingCategory : NSInteger
     else
         return [teamsData count];
 }
-
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // xib
@@ -314,7 +311,8 @@ typedef enum RatingCategory : NSInteger
         [self configureLabel:[cell numberRanking] withText:numRanking andSize:24.0 andColor:COLOR_WHITE];
         // pilot name..
         [self defaultFontTo:[cell pilotName] withSize:13.0 andColor:COLOR_WHITE];
-        [[cell pilotName] setText:[[obj objectForKey:KEY_NAME] uppercaseString]];
+        NSString *pilotName = [[obj objectForKey:KEY_NAME] isEqualToString:KEY_EMPTY] ? @"Piloto não cadastrado" : [[obj objectForKey:KEY_NAME] uppercaseString];
+        [[cell pilotName] setText:pilotName];
         // team name..
         [self defaultFontTo:[cell teamName] withSize:10.0 andColor:COLOR_GREY_LIGHT];
         [[cell teamName] setText:[obj objectForKey:KEY_TEAM]];
@@ -375,9 +373,9 @@ typedef enum RatingCategory : NSInteger
     
 	return cell;
 }
-
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     if (tableView == pilotsTable)
     {
         NSDictionary *dataPilot;
@@ -414,6 +412,7 @@ typedef enum RatingCategory : NSInteger
         Teams *c = [[Teams alloc] initWithDictionary:dataTeam andBackButton:YES];
         [[self navigationController] pushViewController:c animated:YES];
     }
+    */
 }
 
 @end

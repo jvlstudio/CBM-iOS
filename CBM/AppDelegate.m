@@ -70,6 +70,11 @@
 #pragma mark -
 #pragma mark Facebook Methods
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+}
+
+/*
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
     return [PFFacebookUtils handleOpenURL:url];
@@ -79,7 +84,7 @@
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     return [PFFacebookUtils handleOpenURL:url];
-}
+}*/
 
 #pragma mark -
 #pragma mark UIDevice Methods

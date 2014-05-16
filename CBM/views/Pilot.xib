@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Pilot">
@@ -14,9 +14,9 @@
                 <outlet property="btStatistic" destination="14" id="21"/>
                 <outlet property="imgViewShield" destination="48" id="49"/>
                 <outlet property="labelName" destination="42" id="43"/>
+                <outlet property="labelNumber" destination="35" id="tCG-Qu-Kcs"/>
                 <outlet property="labelPoints" destination="36" id="38"/>
-                <outlet property="labelRanking" destination="37" id="39"/>
-                <outlet property="labelRating" destination="35" id="40"/>
+                <outlet property="labelPosition" destination="37" id="tGY-m1-Ff3"/>
                 <outlet property="pilotBg" destination="10" id="24"/>
                 <outlet property="pilotImage" destination="11" id="23"/>
                 <outlet property="sectionView" destination="9" id="22"/>

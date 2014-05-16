@@ -95,7 +95,7 @@
 {
     // data..
     tools           = [[FRTools alloc] initWithTools];
-    plistPilots     = [tools propertyListRead:PLIST_PILOTS];
+    plistPilots     = [webservice pilots]; //[tools propertyListRead:PLIST_PILOTS];
     
     dataPilots      = [NSMutableArray array];
     dataMeta        = [dict objectForKey:KEY_META];
@@ -112,8 +112,13 @@
     }
     
     // labels..
-    NSString *points    = [NSString stringWithFormat:@"%i", [[dict objectForKey:KEY_POINTS] intValue]];
-    NSString *ranking   = [NSString stringWithFormat:@"%i", [[dict objectForKey:KEY_RANKING] intValue]];
+    NSInteger intPoints, intRanking;
+    NSString *points, *ranking;
+    intPoints = [[dict objectForKey:KEY_POINTS] intValue];
+    intRanking= [[dict objectForKey:KEY_RANKING] intValue];
+    points    = intPoints > 0 ? [NSString stringWithFormat:@"%i", intPoints] : @"--";
+    ranking   = intRanking > 0 ? [NSString stringWithFormat:@"%i", intRanking] : @"--";
+    
     [self configureLabel:labName withText:[[dict objectForKey:KEY_NAME] uppercaseString] andSize:25.0 andColor:COLOR_WHITE];
     [self configureLabel:labRanking withText:ranking andSize:25.0 andColor:COLOR_WHITE];
     [self configureLabel:labPoints withText:points andSize:20.0 andColor:COLOR_WHITE];

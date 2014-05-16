@@ -52,6 +52,8 @@
     tools           = [[FRTools alloc] initWithTools];
     update          = [[UpdateData alloc] initWithRootViewController:self];
     
+    [webservice updateData];
+    
     // alerts..
     alertUpdatePilot    = [[UIAlertView alloc] initWithTitle:ALERT_TITLE
                                                      message:ALERT_MESSAGE_PILOT
@@ -71,6 +73,7 @@
 
 - (IBAction) pressPilot:(id)sender
 {
+    /*
     if ([update isReadyToRequestUpdateForKey:LOG_UPDATE_PILOTS])
     {
         [update sync:SYNC_START_MESSAGE];
@@ -78,10 +81,12 @@
     }
     else {
         [self pushPilots];
-    }
+    }*/
+    [self pushPilots];
 }
 - (IBAction) pressSteps:(id)sender
 {
+    /*
     if ([update isReadyToRequestUpdateForKey:LOG_UPDATE_STEPS])
     {
         [update sync:SYNC_START_MESSAGE];
@@ -90,6 +95,8 @@
     else {
         [self pushSteps];
     }
+    */
+    [self pushSteps];
 }
 
 #pragma mark -

@@ -95,13 +95,11 @@
     // fire..
     [timer fire];
 }
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [update sync:@"Carregando..."];
     [self performSelector:@selector(loadRows) withObject:nil afterDelay:0.5];
 }
-
 - (void)viewDidDisappear:(BOOL)animated
 {
     [timer invalidate];
@@ -114,6 +112,7 @@
 - (void) loadRows
 {
     NSString *urlLiveStep   = [NSString stringWithFormat:@"%@/%@etapa.json", URL_LIVE, [stepDict objectForKey:KEY_NUM_STEP]];
+    NSLog(@"-[LIVE]: live URL %@", urlLiveStep);
     [update downlaodDataFrom:urlLiveStep success:^{
         [update syncEnd:@"Live Time atualizado."];
         NSDictionary *returnData = [update JSONData];
@@ -122,7 +121,6 @@
         // nothing..
     }];
 }
-
 - (void) updateRows:(id)sender
 {
     seconds--;
@@ -138,7 +136,6 @@
         [self loadRows];
     }
 }
-
 - (void) processData:(NSArray *)arrayOfProofs
 {
     NSMutableArray *mutArr = [NSMutableArray array];
@@ -214,7 +211,6 @@
         }
     }
 }
-
 - (NSString *) stringValue:(id) value
 {
     NSString *str = [NSString stringWithFormat:@"%@", value];
@@ -301,7 +297,6 @@
     // wait view..
     [self configurePortraitWaitView];
 }
-
 - (void) configurePortraitWaitView
 {
     NSArray *xib        = [[NSBundle mainBundle] loadNibNamed:XIB_RESOURCES_LIVE owner:nil options:nil];
@@ -320,7 +315,6 @@
     [self defaultFontTo:[vSubPortrait labText] withSize:17.0 andColor:COLOR_WHITE];
     [[self view] addSubview:vSubPortrait];
 }
-
 - (void) configureLandscapeScreen
 {
     // data..
@@ -367,7 +361,6 @@
     // wait view..
     [self configureLandscapeWaitView];
 }
-
 - (void) configureLandscapeWaitView
 {
     NSArray *xib        = [[NSBundle mainBundle] loadNibNamed:XIB_RESOURCES_LIVE owner:nil options:nil];
@@ -394,12 +387,10 @@
 {
     return 32.0;
 }
-
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
-
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *sec;
@@ -424,12 +415,10 @@
     
     return sec;
 }
-
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 20.0;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger returnValue = ZERO;
@@ -485,7 +474,6 @@
     
     return returnValue;
 }
-
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id cell      = nil;
@@ -602,9 +590,9 @@
     
 	return cell;
 }
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     if (orient != kInterfaceOrientationLandscape)
     {
         NSDictionary *obj;
@@ -649,6 +637,7 @@
         Pilot *c = [[Pilot alloc] initWithDictionary:pilotDict andBackButton:YES];
         [[self navigationController] pushViewController:c animated:YES];
     }
+    */
 }
 
 #pragma mark -
@@ -712,7 +701,6 @@
         [self shakeToLeft];
     }
 }
-
 - (IBAction) pressRight:(id)sender
 {
     float currentPage   = scrollHeader.contentOffset.x / WINDOW_WIDTH;
@@ -739,7 +727,6 @@
         [self shakeToRight];
     }
 }
-
 - (void) shakeToLeft
 {
     float delayHalf     = 0.1f;
@@ -772,7 +759,6 @@
         }];
     }];
 }
-
 - (void) shakeToRight
 {
     float delayHalf     = 0.1f;
@@ -928,12 +914,10 @@
     }
     [self rotateViewToOrientation];
 }
-
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     // ..
 }
-
 - (void) rotateViewToOrientation
 {
     switch (orient)
@@ -949,13 +933,11 @@
         }
     }
 }
-
 - (void) rotateViewToOrientationPortrait
 {
     [self setView:vPortrait];
     [super setMenuButton];
 }
-
 - (void) rotateViewToOrientationLandscape
 {
     [self setView:vLandscape];

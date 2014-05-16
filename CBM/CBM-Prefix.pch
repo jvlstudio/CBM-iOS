@@ -14,7 +14,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import <Parse/Parse.h>
 
 #import "CBMNavigationController.h"
 #import "UIImageView+WebCache.h"
@@ -24,10 +23,12 @@
 
 #import "SVPullToRefresh.h"
 #import "PPRevealSideViewController.h"
-
 #import "SBJSON.h"
 
-#import "Constants.h"
+#import "AppKeys.h"
+#import "AppConstants.h"
+#import "AppTypedefs.h"
+
 #import "FRTools.h"
 #import "UpdateData.h"
 

@@ -41,7 +41,7 @@
     
     // plist
     tools       = [[FRTools alloc] initWithTools];
-    plist       = [tools propertyListRead:PLIST_STEPS];
+    plist       = [webservice steps]; //[tools propertyListRead:PLIST_STEPS];
     data        = [plist objectAtIndex:0];
     salepoints  = [data objectForKey:KEY_SALEPOINTS];
     
@@ -52,7 +52,8 @@
     [scroll setDelegate:self];
     [scroll setContentSize:CGSizeMake(WINDOW_WIDTH, rootView.frame.size.height+STATUS_BAR_HEIGHT)];
     
-    int nextIndex = [self getNextStepIndex];
+    NSInteger number = [webservice nextStepNumber];
+    int nextIndex = (number-1 < 0 ? 7 : number-1);
     
     [scrollPass setContentSize:CGSizeMake(WINDOW_WIDTH*[plist count], 330)];
     [scrollPass setContentOffset:CGPointMake(WINDOW_WIDTH*nextIndex, ZERO)];

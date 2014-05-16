@@ -25,6 +25,7 @@
     FRTools *tools;
 }
 
+@synthesize webservice;
 @synthesize backgroundTransparent;
 
 #pragma mark -
@@ -32,7 +33,6 @@
 
 - (id) initCBMViewController:(NSString *)name
 {
-    tools       = [[FRTools alloc] initWithTools];
     self        = [super initWithNibName:name bundle:nil];
     return self;
 }
@@ -40,7 +40,6 @@
 - (id) initCBMViewController:(NSString *)name
                   withTitle:(NSString *)title
 {
-    tools       = [[FRTools alloc] initWithTools];
     self        = [super initWithNibName:name bundle:nil];
     if(self)
     {
@@ -68,30 +67,40 @@
 - (void) viewDidLoadWithMenuButton
 {
     [super viewDidLoad];
+    tools       = [[FRTools alloc] initWithTools];
+    webservice  = [[Webservice alloc] initTheWebservice];
     [self setMenuButton];
 }
 
 - (void) viewDidLoadWithMenuButtonButShowPilots
 {
     [super viewDidLoad];
+    tools       = [[FRTools alloc] initWithTools];
+    webservice  = [[Webservice alloc] initTheWebservice];
     [self setMenuButtonForPilots];
 }
 
 - (void) viewDidLoadWithMenuButtonButShowTeams
 {
     [super viewDidLoad];
+    tools       = [[FRTools alloc] initWithTools];
+    webservice  = [[Webservice alloc] initTheWebservice];
     [self setMenuButtonForTeams];
 }
 
 - (void)viewDidLoadWithBackButton
 {
     [super viewDidLoad];
+    tools       = [[FRTools alloc] initWithTools];
+    webservice  = [[Webservice alloc] initTheWebservice];
     [self setBackButton];
 }
 
 - (void)viewDidLoadWithCloseButton
 {
     [super viewDidLoad];
+    tools       = [[FRTools alloc] initWithTools];
+    webservice  = [[Webservice alloc] initTheWebservice];
     [self setCloseButton];
 }
 
@@ -186,7 +195,6 @@
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.leftBarButtonItem = bt;
 }
-
 - (void) setMenuButton
 {
     UIBarButtonItem *bt = [[CBMBarButton alloc] initWithMenu:@selector(pressMenuButton:) toTarget:self];
@@ -201,7 +209,6 @@
     // reinit the bouncing directions (should not be done in your own implementation, this is just for the sample)
     [self.revealSideViewController setDirectionsToShowBounce:PPRevealSideDirectionLeft];
 }
-
 - (void) setMenuButtonForPilots
 {
     UIBarButtonItem *bt = [[CBMBarButton alloc] initWithMenu:@selector(pressMenuButtonForPilots:) toTarget:self];
@@ -216,7 +223,6 @@
     // reinit the bouncing directions (should not be done in your own implementation, this is just for the sample)
     [self.revealSideViewController setDirectionsToShowBounce:PPRevealSideDirectionLeft];
 }
-
 - (void) setMenuButtonForTeams
 {
     UIBarButtonItem *bt = [[CBMBarButton alloc] initWithMenu:@selector(pressMenuButtonForTeams:) toTarget:self];
@@ -231,7 +237,6 @@
     // reinit the bouncing directions (should not be done in your own implementation, this is just for the sample)
     [self.revealSideViewController setDirectionsToShowBounce:PPRevealSideDirectionLeft];
 }
-
 - (void) setCloseButton
 {
     UIBarButtonItem *bt = [[CBMBarButton alloc] initWithClose:@selector(pressCloseButton:) toTarget:self];
@@ -245,22 +250,18 @@
 {
     [self showLeft];
 }
-
 - (void) pressMenuButtonForPilots:(id)sender
 {
     [self showLeftWithPilots];
 }
-
 - (void) pressMenuButtonForTeams:(id)sender
 {
     [self showLeftWithTeams];
 }
-
 - (void) pressBackButton:(id)sender
 {
     [[self navigationController] popViewControllerAnimated:YES];
 }
-
 - (void) pressCloseButton:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -277,7 +278,6 @@
                                               withOffset:SIDE_MENU_OFFSET];
     PP_RELEASE(c);
 }
-
 - (void) showLeft
 {
     Menu *c = [[Menu alloc] initWithMenuType:kTypeMenuData];
@@ -295,7 +295,6 @@
     else
         [self animateHideBackground];
 }
-
 - (void) showLeftWithPilots
 {
     Menu *c = [[Menu alloc] initWithMenuType:kTypeMenuPilots];

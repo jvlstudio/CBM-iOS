@@ -102,11 +102,12 @@
     // data..
     tools           = [[FRTools alloc] initWithTools];
     update          = [[UpdateData alloc] initWithRootViewController:self];
+    webservice      = [[Webservice alloc] initTheWebservice];
     
     // plists..
-    plistPilots     = [tools propertyListRead:PLIST_PILOTS];
-    plistTeams      = [tools propertyListRead:PLIST_TEAMS];
-    plistSteps      = [tools propertyListRead:PLIST_STEPS];
+    plistPilots     = [webservice pilots]; //[tools propertyListRead:PLIST_PILOTS];
+    plistTeams      = [webservice teams]; //[tools propertyListRead:PLIST_TEAMS];
+    plistSteps      = [webservice steps]; //[tools propertyListRead:PLIST_STEPS];
     
     // set..
     menuData        = [tools propertyListRead:PLIST_MENU];
@@ -177,7 +178,6 @@
 {
     [self menuSlideOptions];
 }
-
 - (IBAction) pressMenuCancelButton:(id)sender
 {
     [self menuSearchFinish:nil andData:nil];
@@ -197,17 +197,16 @@
          pilotsTable.alpha = 0;
      }];
 }
-
 - (void) menuSlidePilotsAndTeamsForLog:(NSString *)log
 {
     // pilots..
     if ([log isEqual:LOG_UPDATE_PILOTS]){
-        pilotsData  = [tools propertyListRead:PLIST_PILOTS];
+        pilotsData  = [webservice pilots]; //[tools propertyListRead:PLIST_PILOTS];
         [pilotsTable reloadData];
     }
     // teams..
     else {
-        pilotsData  = [tools propertyListRead:PLIST_TEAMS];
+        pilotsData  = [webservice teams]; //[tools propertyListRead:PLIST_TEAMS];
         [pilotsTable reloadData];
     }
     
@@ -219,7 +218,6 @@
          [pilotsTable setFrame:CGRECT_1];
      }];
 }
-
 - (void) menuSearchStart
 {
     // change bg
@@ -254,7 +252,6 @@
         searchTable.hidden = NO;
     }];
 }
-
 - (void) menuSearchFinish:(SEL) selectorToExec
                   andData:(NSDictionary *)dDict;
 {
@@ -304,7 +301,6 @@
 {
     [self menuSearchStart];
 }
-
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     [searchTypeData removeAllObjects];
@@ -336,12 +332,10 @@
 {
     return 50.0;
 }
-
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
-
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     // menu...
@@ -358,7 +352,6 @@
         return nil;
     }
 }
-
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     // menu..
@@ -389,7 +382,6 @@
     else
         return 0;
 }
-
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // xib
@@ -463,7 +455,6 @@
     
 	return cell;
 }
-
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // switch..
@@ -495,7 +486,8 @@
                 
             case INDEX_PILOTS:
             {
-                pilotsData = [tools propertyListRead:PLIST_PILOTS];
+                pilotsData = [webservice pilots]; //[tools propertyListRead:PLIST_PILOTS];
+                /*
                 if ([update isReadyToRequestUpdateForKey:LOG_UPDATE_PILOTS])
                 {
                     [update sync:SYNC_START_MESSAGE];
@@ -504,12 +496,15 @@
                 else {
                     [self pushWithOption:LOG_UPDATE_PILOTS];
                 }
+                */
+                [self pushWithOption:LOG_UPDATE_PILOTS];
             }
                 break;
                 
             case INDEX_TEAMS:
             {
-                pilotsData = [tools propertyListRead:PLIST_TEAMS];
+                pilotsData = [webservice teams]; //[tools propertyListRead:PLIST_TEAMS];
+                /*
                 if ([update isReadyToRequestUpdateForKey:LOG_UPDATE_TEAMS])
                 {
                     [update sync:SYNC_START_MESSAGE];
@@ -518,6 +513,8 @@
                 else {
                     [self pushWithOption:LOG_UPDATE_TEAMS];
                 }
+                */
+                [self pushWithOption:LOG_UPDATE_TEAMS];
             }
                 break;
                 
@@ -534,6 +531,7 @@
                 
             case INDEX_RATING:
             {
+                /*
                 if ([update isReadyToRequestUpdateForKey:LOG_UPDATE_RATING])
                 {
                     [update sync:SYNC_START_MESSAGE];
@@ -542,11 +540,25 @@
                 else {
                     [self pushWithOption:LOG_UPDATE_RATING];
                 }
+                */
+                
+                UpdateData *up = [[UpdateData alloc] initWithRootViewController:self];
+                [up sync:@"Atualizando..."];
+                [webservice wtvisionDataForStep:[webservice currentStepNumber] didSucceed:^{
+                    [up syncEnd:@""];
+                    [self pushWithOption:LOG_UPDATE_RATING];
+                } didFail:^{
+                    [up syncEnd:@""];
+                    [tools dialogWithMessage:@"Não foi possível conectar-se a internet para carregar os resultados dessa etapa. Por favor, verifique sua conexão e tente novamente." title:@"Sem conexão"];
+                }];
+                
+                //[self pushWithOption:LOG_UPDATE_RATING];
             }
                 break;
                 
             case INDEX_STEPS:
             {
+                /*
                 if ([update isReadyToRequestUpdateForKey:LOG_UPDATE_STEPS])
                 {
                     [update sync:SYNC_START_MESSAGE];
@@ -555,6 +567,8 @@
                 else {
                     [self pushWithOption:LOG_UPDATE_STEPS];
                 }
+                */
+                [self pushWithOption:LOG_UPDATE_STEPS];
             }
                 break;
                 
@@ -571,6 +585,7 @@
                 
             case INDEX_LIVE:
             {
+                /*
                 if ([update isReadyToRequestUpdateForKey:LOG_UPDATE_STEPS])
                 {
                     [update sync:SYNC_START_MESSAGE];
@@ -579,6 +594,8 @@
                 else {
                     [self pushWithOption:LOG_UPDATE_LIVE];
                 }
+                */
+                [self pushWithOption:LOG_UPDATE_LIVE];
             }
                 break;
                 
@@ -598,12 +615,16 @@
         {
             case kPilotChosen:
             {
-                Pilot *c = [[Pilot alloc] initWithDictionary:obj andBackButton:NO];
-                CBMNavigationController *n;
-                n = [[CBMNavigationController alloc] initWithCBMControllerAndLeftButton:c title:TITLE_PILOTS];
-                [self.revealSideViewController popViewControllerWithNewCenterController:n animated:YES];
-                PP_RELEASE(c);
-                PP_RELEASE(n);
+                [webservice wtvisionDataForStep:[webservice currentStepNumber] didSucceed:^{
+                    Pilot *c = [[Pilot alloc] initWithDictionary:obj andBackButton:NO];
+                    CBMNavigationController *n;
+                    n = [[CBMNavigationController alloc] initWithCBMControllerAndLeftButton:c title:TITLE_PILOTS];
+                    [self.revealSideViewController popViewControllerWithNewCenterController:n animated:YES];
+                    PP_RELEASE(c);
+                    PP_RELEASE(n);
+                } didFail:^{
+                    [tools dialogWithMessage:@"Não foi possível conectar-se a internet para carregar os resultados dessa etapa. Por favor, verifique sua conexão e tente novamente." title:@"Sem conexão"];
+                }];
             }
                 break;
             case kTeamChosen:
@@ -666,7 +687,7 @@
             [update syncEnd:SYNC_END_MESSAGE];
             NSArray *arr = [[update JSONData] objectForKey:KEY_DATA];
             [tools propertyListWrite:arr forFileName:PLIST_PILOTS];
-            pilotsData = [tools propertyListRead:PLIST_PILOTS];
+            pilotsData = [webservice pilots]; //[tools propertyListRead:PLIST_PILOTS];
             [pilotsTable reloadData];
             [self pushWithOption:option];
         } fail:^{
@@ -682,7 +703,7 @@
             [update syncEnd:SYNC_END_MESSAGE];
             NSArray *arr = [[update JSONData] objectForKey:KEY_DATA];
             [tools propertyListWrite:arr forFileName:PLIST_TEAMS];
-            pilotsData = [tools propertyListRead:PLIST_TEAMS];
+            pilotsData = [webservice pilots]; //[tools propertyListRead:PLIST_TEAMS];
             [pilotsTable reloadData];
             [self pushWithOption:option];
         } fail:^{
@@ -720,7 +741,6 @@
         }];
     }
 }
-
 - (void) pushWithOption:(NSString *)option
 {
     // pilots..
@@ -761,22 +781,20 @@
     else if([option isEqual:LOG_UPDATE_LIVE])
     {
         // get next step..
-        NSDictionary *nextStep;
-        NSArray *steps = [tools propertyListRead:PLIST_STEPS];
-        for (NSDictionary *step in steps){
-            if ([[step objectForKey:KEY_IS_ENDED] isEqual:KEY_NO]){
-                nextStep = step;
-                break;
-            }
+        NSInteger nextStepNumber = [webservice nextStepNumber];
+        if (nextStepNumber == 0) {
+            [tools dialogWithMessage:@"Não há livetime acontecendo no momento." title:@"Livetime"];
         }
-        
-        LiveSingle *c = [[LiveSingle alloc] initWithDictionary:nextStep];
-        CBMNavigationController *n;
-        n = [[CBMNavigationController alloc] initWithCBMControllerAndLeftButton:c title:TITLE_LIVE];
-        [n setLetRotateToLandscape:YES];
-        [self.revealSideViewController popViewControllerWithNewCenterController:n animated:YES];
-        PP_RELEASE(c);
-        PP_RELEASE(n);
+        else {
+            NSDictionary *nextStep = [webservice stepForNumber:nextStepNumber];
+            LiveSingle *c = [[LiveSingle alloc] initWithDictionary:nextStep];
+            CBMNavigationController *n;
+            n = [[CBMNavigationController alloc] initWithCBMControllerAndLeftButton:c title:TITLE_LIVE];
+            [n setLetRotateToLandscape:YES];
+            [self.revealSideViewController popViewControllerWithNewCenterController:n animated:YES];
+            PP_RELEASE(c);
+            PP_RELEASE(n);
+        }
     }
 }
 
@@ -804,7 +822,6 @@
         [searchData addObject:row];
     }
 }
-
 - (NSString*) titleForSearchSection:(NSInteger)section
 {
     NSString *stringToReturn;
@@ -828,7 +845,6 @@
     }
     return stringToReturn;
 }
-
 - (NSString *)textForRightType:(NSString*)type :(NSString *)text
 {
     NSString *textToReturn = @"";
@@ -845,7 +861,6 @@
     NSString *txtName = [[NSString stringWithFormat:@"%@: %@", textToReturn, text] uppercaseString];
     return txtName;
 }
-
 - (void) presentCenterViewControllerFromSearch:(NSDictionary *)dict
 {
     // pilots...
@@ -883,7 +898,7 @@
 #pragma mark -
 #pragma mark Push Custom Methods
 
-- (void)pushPilotWithDictionary:(NSDictionary *)dict
+- (void) pushPilotWithDictionary:(NSDictionary *)dict
 {
     Pilot *c = [[Pilot alloc] initWithDictionary:dict andBackButton:NO];
     CBMNavigationController *n;
@@ -892,8 +907,7 @@
     PP_RELEASE(c);
     PP_RELEASE(n);
 }
-
-- (void)pushStepWithDictionary:(NSDictionary *)dict
+- (void) pushStepWithDictionary:(NSDictionary *)dict
 {
     StepsSingle *c = [[StepsSingle alloc] initWithDictionary:dict andBackButton:NO];
     CBMNavigationController *n;

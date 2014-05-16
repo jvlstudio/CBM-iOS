@@ -95,16 +95,15 @@
         [labDate setHidden:YES];
     
     // content..
-    NSArray *plistTemp  = [tools propertyListRead:PLIST_STEPS_ROWS];
+    NSInteger numStepSelected = [[stepDict objectForKey:KEY_NUM_STEP] intValue];
+    NSArray *plistTemp  = [webservice wtvisionRowsForStep:numStepSelected type:kClassProofs]; //[tools propertyListRead:PLIST_STEPS_ROWS];
     NSString *strProof1Pilot, *strProof1BestLap;
     NSString *strProof2Pilot, *strProof2BestLap;
     
     if ([[stepDict objectForKey:KEY_NUM_STEP] intValue] <= [plistTemp count])
     {
-        int numStepSelected = [[stepDict objectForKey:KEY_NUM_STEP] intValue] - 1;
-        NSArray* rows       = [plistTemp objectAtIndex:numStepSelected];
-        NSArray* proof1     = [rows objectAtIndex:2];
-        NSArray* proof2     = [rows objectAtIndex:3];
+        NSArray* proof1     = [plistTemp objectAtIndex:2];
+        NSArray* proof2     = [plistTemp objectAtIndex:3];
         NSDictionary *dict1 = [proof1 objectAtIndex:0];
         NSDictionary *dict2 = [proof2 objectAtIndex:0];
         

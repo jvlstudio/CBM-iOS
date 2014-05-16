@@ -9,6 +9,29 @@
 #import "CBMViewController.h"
 
 @interface Pilot : CBMViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    IBOutlet UIView *tweetView;
+    IBOutlet UILabel *tweetContent;
+    IBOutlet UIActivityIndicatorView *activity;
+    
+    IBOutlet UILabel *labelName;
+    IBOutlet UILabel *labelPosition;
+    IBOutlet UILabel *labelPoints;
+    IBOutlet UILabel *labelNumber;
+    IBOutlet UIImageView *imgViewShield;
+    
+    IBOutlet UIImageView *pilotBg;
+    IBOutlet UIView *sectionView;
+    IBOutlet UIButton *btBio;
+    IBOutlet UIButton *btStatistic;
+    IBOutlet UIButton *btCar;
+    
+    IBOutlet UIImageView *pilotImage;
+    
+    IBOutlet UITextView *bioView;
+    IBOutlet UITableView *table;
+    IBOutlet UITableView *tableCar;
+}
 
 /* data */
 
@@ -17,35 +40,8 @@
 @property (nonatomic, strong) NSArray *tableData;
 @property (nonatomic, strong) NSArray *tableCarData;
 
-/* tweet view */
-
-@property (nonatomic, strong) IBOutlet UIView *tweetView;
-@property (nonatomic, strong) IBOutlet UILabel *tweetContent;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activity;
-
-/* labels */
-
-@property (nonatomic, strong) IBOutlet UILabel *labelName;
-@property (nonatomic, strong) IBOutlet UILabel *labelRanking;
-@property (nonatomic, strong) IBOutlet UILabel *labelPoints;
-@property (nonatomic, strong) IBOutlet UILabel *labelRating;
-@property (nonatomic, strong) IBOutlet UIImageView *imgViewShield;
-
-/* header */
-
-@property (nonatomic, strong) IBOutlet UIImageView *pilotBg;
-@property (nonatomic, strong) IBOutlet UIView *sectionView;
-@property (nonatomic, strong) IBOutlet UIButton *btBio;
-@property (nonatomic, strong) IBOutlet UIButton *btStatistic;
-@property (nonatomic, strong) IBOutlet UIButton *btCar;
-
-/* views: bio, statistics & car */
-
 @property (nonatomic, strong) IBOutlet UIImageView *pilotImage;
-
-@property (nonatomic, strong) IBOutlet UITextView *bioView;
-@property (nonatomic, strong) IBOutlet UITableView *table;
-@property (nonatomic, strong) IBOutlet UITableView *tableCar;
 
 #pragma mark -
 #pragma mark Init Methods
