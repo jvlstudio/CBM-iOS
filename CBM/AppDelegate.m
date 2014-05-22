@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Crashlytics/Crashlytics.h>
 
 #import "HomeSimple.h"
 #import "Opening.h"
@@ -17,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = PP_AUTORELEASE([[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]);
+    [Crashlytics startWithAPIKey:CRASH_ANALYTICS_KEY];
     
     // Let the device know we want to receive push notifications
     [Parse setApplicationId:PARSE_APP_ID
@@ -36,6 +37,7 @@
     application.applicationIconBadgeNumber = 0;
     
     // Override point for customization after application launch.
+    self.window = PP_AUTORELEASE([[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]);
     self.window.rootViewController = [self openingWithAnimation];
     [self.window makeKeyAndVisible];
     

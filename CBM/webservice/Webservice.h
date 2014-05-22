@@ -10,11 +10,11 @@
 
 #pragma mark - Constants
 
-#define CACHE_ALL           @"content_all"
-#define CACHE_PILOTS        @"content_pilots"
-#define CACHE_TEAMS         @"content_teams"
-#define CACHE_STEPS         @"content_steps"
-#define CACHE_EXTENSION     @"txt"
+//#define CACHE_ALL           @"content_all"
+//#define CACHE_PILOTS        @"content_pilots"
+//#define CACHE_TEAMS         @"content_teams"
+//#define CACHE_STEPS         @"content_steps"
+//#define CACHE_EXTENSION     @"txt"
 #define CACHE_KEY_PILOTS    @"pilots"
 #define CACHE_KEY_TEAMS     @"teams"
 #define CACHE_KEY_STEPS     @"steps"

@@ -137,15 +137,6 @@
 		4A7BF11C18F72A5D00F747D2 /* Webservice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7BF11B18F72A5D00F747D2 /* Webservice.m */; };
 		4A7BF11F18F72ABF00F747D2 /* AppResources.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7BF11E18F72ABF00F747D2 /* AppResources.xib */; };
 		4A7BF12C18F7354F00F747D2 /* CBM-Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A7BF12B18F7354F00F747D2 /* CBM-Data.plist */; };
-		4A82B96918FC50AB00ACD8F2 /* 1etapa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A82B96018FC50AB00ACD8F2 /* 1etapa.txt */; };
-		4A82B96A18FC50AB00ACD8F2 /* 2etapa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A82B96118FC50AB00ACD8F2 /* 2etapa.txt */; };
-		4A82B96B18FC50AB00ACD8F2 /* 3etapa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A82B96218FC50AB00ACD8F2 /* 3etapa.txt */; };
-		4A82B96C18FC50AB00ACD8F2 /* 4etapa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A82B96318FC50AB00ACD8F2 /* 4etapa.txt */; };
-		4A82B96D18FC50AB00ACD8F2 /* 5etapa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A82B96418FC50AB00ACD8F2 /* 5etapa.txt */; };
-		4A82B96E18FC50AB00ACD8F2 /* 6etapa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A82B96518FC50AB00ACD8F2 /* 6etapa.txt */; };
-		4A82B96F18FC50AB00ACD8F2 /* 7etapa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A82B96618FC50AB00ACD8F2 /* 7etapa.txt */; };
-		4A82B97018FC50AB00ACD8F2 /* 8etapa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A82B96718FC50AB00ACD8F2 /* 8etapa.txt */; };
-		4A82B97118FC50AB00ACD8F2 /* content_all.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A82B96818FC50AB00ACD8F2 /* content_all.txt */; };
 		4A82B97318FC6AC400ACD8F2 /* steps_2014@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A82B97218FC6AC400ACD8F2 /* steps_2014@2x.png */; };
 		4A8EC29417CE34DD009FD112 /* LiveWaitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EC29317CE34DD009FD112 /* LiveWaitView.m */; };
 		4A8ED28A177C885400D481AA /* MenuSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8ED289177C885400D481AA /* MenuSearchCell.m */; };
@@ -168,6 +159,7 @@
 		4AC2A98B174BFD11004A173F /* CBMBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC2A98A174BFD11004A173F /* CBMBarButton.m */; };
 		4AC2A9E7174C185F004A173F /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC2A9E5174C185F004A173F /* Menu.m */; };
 		4AC2A9E8174C185F004A173F /* Menu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC2A9E6174C185F004A173F /* Menu.xib */; };
+		4AD047E6192E7582002BBC64 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD047E5192E7582002BBC64 /* Crashlytics.framework */; };
 		4AD40AE3181EE64F00320054 /* arrow_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD40A1E181EE64E00320054 /* arrow_green@2x.png */; };
 		4AD40AE4181EE64F00320054 /* bg_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD40A1F181EE64E00320054 /* bg_menu@2x.png */; };
 		4AD40AE5181EE64F00320054 /* bg_navigationbar_00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD40A20181EE64E00320054 /* bg_navigationbar_00@2x.png */; };
@@ -584,15 +576,6 @@
 		4A7BF11B18F72A5D00F747D2 /* Webservice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Webservice.m; path = webservice/Webservice.m; sourceTree = "<group>"; };
 		4A7BF11E18F72ABF00F747D2 /* AppResources.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppResources.xib; sourceTree = "<group>"; };
 		4A7BF12B18F7354F00F747D2 /* CBM-Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CBM-Data.plist"; sourceTree = "<group>"; };
-		4A82B96018FC50AB00ACD8F2 /* 1etapa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1etapa.txt; sourceTree = "<group>"; };
-		4A82B96118FC50AB00ACD8F2 /* 2etapa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2etapa.txt; sourceTree = "<group>"; };
-		4A82B96218FC50AB00ACD8F2 /* 3etapa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 3etapa.txt; sourceTree = "<group>"; };
-		4A82B96318FC50AB00ACD8F2 /* 4etapa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 4etapa.txt; sourceTree = "<group>"; };
-		4A82B96418FC50AB00ACD8F2 /* 5etapa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 5etapa.txt; sourceTree = "<group>"; };
-		4A82B96518FC50AB00ACD8F2 /* 6etapa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 6etapa.txt; sourceTree = "<group>"; };
-		4A82B96618FC50AB00ACD8F2 /* 7etapa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 7etapa.txt; sourceTree = "<group>"; };
-		4A82B96718FC50AB00ACD8F2 /* 8etapa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 8etapa.txt; sourceTree = "<group>"; };
-		4A82B96818FC50AB00ACD8F2 /* content_all.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = content_all.txt; sourceTree = "<group>"; };
 		4A82B97218FC6AC400ACD8F2 /* steps_2014@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "steps_2014@2x.png"; sourceTree = "<group>"; };
 		4A8EC29217CE34DD009FD112 /* LiveWaitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveWaitView.h; path = cells/LiveWaitView.h; sourceTree = "<group>"; };
 		4A8EC29317CE34DD009FD112 /* LiveWaitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveWaitView.m; path = cells/LiveWaitView.m; sourceTree = "<group>"; };
@@ -631,6 +614,7 @@
 		4AC2A9E4174C185F004A173F /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Menu.h; path = views/Menu.h; sourceTree = "<group>"; };
 		4AC2A9E5174C185F004A173F /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Menu.m; path = views/Menu.m; sourceTree = "<group>"; };
 		4AC2A9E6174C185F004A173F /* Menu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Menu.xib; path = views/Menu.xib; sourceTree = "<group>"; };
+		4AD047E5192E7582002BBC64 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		4AD40A1E181EE64E00320054 /* arrow_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_green@2x.png"; sourceTree = "<group>"; };
 		4AD40A1F181EE64E00320054 /* bg_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_menu@2x.png"; sourceTree = "<group>"; };
 		4AD40A20181EE64E00320054 /* bg_navigationbar_00@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_navigationbar_00@2x.png"; sourceTree = "<group>"; };
@@ -864,6 +848,7 @@
 				4A1D054F174BBD6700C0F920 /* StoreKit.framework in Frameworks */,
 				4A1D054D174BBD1900C0F920 /* libz.1.1.3.dylib in Frameworks */,
 				4A569F83174BB7C500E9435C /* AudioToolbox.framework in Frameworks */,
+				4AD047E6192E7582002BBC64 /* Crashlytics.framework in Frameworks */,
 				4A24DFFB1817FDC500F8C578 /* FacebookSDK.framework in Frameworks */,
 				4A569F85174BB7C500E9435C /* CFNetwork.framework in Frameworks */,
 				4A569F8B174BB7C500E9435C /* libiconv.dylib in Frameworks */,
@@ -1246,6 +1231,7 @@
 				4A569F70174BB7C500E9435C /* CFNetwork.framework */,
 				4A569F40174BB5E000E9435C /* CoreGraphics.framework */,
 				4A1D0550174BBD8400C0F920 /* CoreLocation.framework */,
+				4AD047E5192E7582002BBC64 /* Crashlytics.framework */,
 				4A24DFFA1817FDC400F8C578 /* FacebookSDK.framework */,
 				4A569F3E174BB5E000E9435C /* Foundation.framework */,
 				4A1D0567174BC24300C0F920 /* ImageIO.framework */,
@@ -1435,22 +1421,6 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
-		4A82B95F18FC50AB00ACD8F2 /* content */ = {
-			isa = PBXGroup;
-			children = (
-				4A82B96018FC50AB00ACD8F2 /* 1etapa.txt */,
-				4A82B96118FC50AB00ACD8F2 /* 2etapa.txt */,
-				4A82B96218FC50AB00ACD8F2 /* 3etapa.txt */,
-				4A82B96318FC50AB00ACD8F2 /* 4etapa.txt */,
-				4A82B96418FC50AB00ACD8F2 /* 5etapa.txt */,
-				4A82B96518FC50AB00ACD8F2 /* 6etapa.txt */,
-				4A82B96618FC50AB00ACD8F2 /* 7etapa.txt */,
-				4A82B96718FC50AB00ACD8F2 /* 8etapa.txt */,
-				4A82B96818FC50AB00ACD8F2 /* content_all.txt */,
-			);
-			path = content;
-			sourceTree = "<group>";
-		};
 		4AC033CF17A1592F00A85FAD /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1470,7 +1440,6 @@
 			isa = PBXGroup;
 			children = (
 				4A55403B1784B528004EA9CA /* news_single.css */,
-				4A82B95F18FC50AB00ACD8F2 /* content */,
 				4AC2A96C174BF731004A173F /* fonts */,
 				4AD40A1D181EE64E00320054 /* images */,
 				4AC2A970174BF736004A173F /* plists */,
@@ -1736,6 +1705,7 @@
 				4A569F35174BB5E000E9435C /* Sources */,
 				4A569F36174BB5E000E9435C /* Frameworks */,
 				4A569F37174BB5E000E9435C /* Resources */,
+				4AD047E4192E7536002BBC64 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1793,7 +1763,6 @@
 				4A569F47174BB5E000E9435C /* InfoPlist.strings in Resources */,
 				4AD40AF4181EE64F00320054 /* bt_live_results@2x.png in Resources */,
 				4A569F4F174BB5E000E9435C /* Default.png in Resources */,
-				4A82B96A18FC50AB00ACD8F2 /* 2etapa.txt in Resources */,
 				4AD40B6F181EE64F00320054 /* shield_large_chevrolet@2x.png in Resources */,
 				4AD40B69181EE64F00320054 /* shield_chevrolet@2x.png in Resources */,
 				4AD40B12181EE64F00320054 /* cell_rating_shield_ford@2x.png in Resources */,
@@ -1823,10 +1792,8 @@
 				4A569F51174BB5E000E9435C /* Default@2x.png in Resources */,
 				4AD40B1D181EE64F00320054 /* cell_teams_2@2x.png in Resources */,
 				4A569F53174BB5E000E9435C /* Default-568h@2x.png in Resources */,
-				4A82B96918FC50AB00ACD8F2 /* 1etapa.txt in Resources */,
 				4AD40B9B181EE64F00320054 /* team_cesinha_competicoes@2x.png in Resources */,
 				4AD40B32181EE64F00320054 /* live_go_01@2x.png in Resources */,
-				4A82B97118FC50AB00ACD8F2 /* content_all.txt in Resources */,
 				4A3BA3DB19180689002B2D6C /* steps_lap_velopark@2x.png in Resources */,
 				4AD40AFB181EE64F00320054 /* bt_steps_getpass@2x.png in Resources */,
 				4AD40B34181EE64F00320054 /* live_go_03@2x.png in Resources */,
@@ -1855,7 +1822,6 @@
 				4AD40B11181EE64F00320054 /* cell_rating_shield_chevrolet@2x.png in Resources */,
 				4AC2A9E8174C185F004A173F /* Menu.xib in Resources */,
 				4A73230E174D00410009BAE2 /* CBM-Menu.plist in Resources */,
-				4A82B96D18FC50AB00ACD8F2 /* 5etapa.txt in Resources */,
 				4AD40AED181EE64F00320054 /* bg_viewcontroller_02@2x.png in Resources */,
 				4AD40B0C181EE64F00320054 /* cell_pilot_car_dark@2x.png in Resources */,
 				4AD40B7F181EE64F00320054 /* steps_lap_cascavel@2x.png in Resources */,
@@ -1911,7 +1877,6 @@
 				4AD40B4A181EE64F00320054 /* news_date@2x.png in Resources */,
 				4AD40B3B181EE64F00320054 /* menu_news@2x.png in Resources */,
 				4A3BA3DC19180689002B2D6C /* steps_single_cover_cascavel_sta_cruz@2x.png in Resources */,
-				4A82B96B18FC50AB00ACD8F2 /* 3etapa.txt in Resources */,
 				4A7BF11F18F72ABF00F747D2 /* AppResources.xib in Resources */,
 				4AD40B7C181EE64F00320054 /* steps_finished@2x.png in Resources */,
 				4AD40B0A181EE64F00320054 /* cell_news@2x.png in Resources */,
@@ -1934,7 +1899,6 @@
 				4AD40B31181EE64F00320054 /* live_go_00@2x.png in Resources */,
 				4AD40B38181EE64F00320054 /* menu_live@2x.png in Resources */,
 				4AD40B2D181EE64F00320054 /* icon_facebook@2x.png in Resources */,
-				4A82B96E18FC50AB00ACD8F2 /* 6etapa.txt in Resources */,
 				4A052FC1174FF3DC0048C868 /* TicketPassView.xib in Resources */,
 				4AD40B7E181EE64F00320054 /* steps_lap_brasilia_tiny@2x.png in Resources */,
 				4A052FC6174FFAE50048C868 /* TicketsSales.xib in Resources */,
@@ -1956,7 +1920,6 @@
 				4AD40B5A181EE64F00320054 /* rating_line@2x.png in Resources */,
 				4AD40B19181EE64F00320054 /* cell_steps_list_ended@2x.png in Resources */,
 				4A31F08B18FDADBF00C4D78B /* CBM-2014-ContentAll.plist in Resources */,
-				4A82B97018FC50AB00ACD8F2 /* 8etapa.txt in Resources */,
 				4AD40B4D181EE64F00320054 /* news_share@2x.png in Resources */,
 				4AD40B89181EE64F00320054 /* steps_results_header@2x.png in Resources */,
 				4AB249C91753D78300A34F9B /* Pilot.xib in Resources */,
@@ -2016,7 +1979,6 @@
 				4AD40B92181EE64F00320054 /* steps_single_picture@2x.png in Resources */,
 				4AD40B99181EE64F00320054 /* team_amir_nasr_racing@2x.png in Resources */,
 				4A2BA825177B21F90012A48D /* CBM-Steps-Proofs.plist in Resources */,
-				4A82B96C18FC50AB00ACD8F2 /* 4etapa.txt in Resources */,
 				4AE2204F17822AF200916626 /* CBM-Roads-Salepoints.plist in Resources */,
 				4AD40BA4181EE64F00320054 /* teams_bar@2x.png in Resources */,
 				4A6FF5B7178315B50068A9E7 /* NeoSansMI.ttf in Resources */,
@@ -2056,7 +2018,6 @@
 				4AD40AF0181EE64F00320054 /* bt_back_menu@2x.png in Resources */,
 				4A64334817B2B22000A96037 /* Opening.xib in Resources */,
 				4AD40B8A181EE64F00320054 /* steps_single_bg@2x.png in Resources */,
-				4A82B96F18FC50AB00ACD8F2 /* 7etapa.txt in Resources */,
 				4AD40AF7181EE64F00320054 /* bt_menu@2x.png in Resources */,
 				4AD40B61181EE64F00320054 /* section_pilots@2x.png in Resources */,
 				4A31F08D18FDADD100C4D78B /* CBM-2014-WTVision.plist in Resources */,
@@ -2064,6 +2025,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AD047E4192E7536002BBC64 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "./Crashlytics.framework/run 48118b9b5992c16c30f272709e02fe01c05ee2d5 584c515000e8a2237bf7cbbf74a124dd52588221f7d75526b5487810ad40d03a";
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A569F35174BB5E000E9435C /* Sources */ = {
@@ -2235,6 +2212,7 @@
 					"$(inherited)",
 					"/Users/felipericieri/Dev-Mobile/_iOS/frameworks",
 					/Users/felipericieri/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBM/CBM-Prefix.pch";
@@ -2260,6 +2238,7 @@
 					"$(inherited)",
 					"/Users/felipericieri/Dev-Mobile/_iOS/frameworks",
 					/Users/felipericieri/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBM/CBM-Prefix.pch";
@@ -2311,6 +2290,7 @@
 					"$(inherited)",
 					"/Users/felipericieri/Dev-Mobile/_iOS/frameworks",
 					/Users/felipericieri/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBM/CBM-Prefix.pch";
@@ -2362,6 +2342,7 @@
 					"$(inherited)",
 					"/Users/felipericieri/Dev-Mobile/_iOS/frameworks",
 					/Users/felipericieri/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBM/CBM-Prefix.pch";

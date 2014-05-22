@@ -59,7 +59,7 @@
 - (void) sync: (NSString *) message success:(void(^)(void))callback
 {
     //
-    NSArray *xib    = [[NSBundle mainBundle] loadNibNamed:@"CBMViewControllerResources" owner:nil options:nil];
+    NSArray *xib    = [[NSBundle mainBundle] loadNibNamed:APP_RESOURCES owner:nil options:nil];
     loadView        = [xib objectAtIndex:0];
     CGRect frame    = loadView.frame;
     frame.origin.y = -64;

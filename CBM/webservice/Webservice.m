@@ -38,9 +38,11 @@
     [self sendGETRequestToEndPoint:URL_ALL withParameter:KEY_EMPTY didSucceed:^{
         //NSString *fileName = [NSString stringWithFormat:@"%@.txt", CACHE_ALL];
         //[tools saveDataToFile:[self RESTData] fileName:CACHE_ALL];
-        NSLog(@"- [WS]: cache was updated");
-        NSDictionary *dict = @{KEY_CONTENT: [self RESTData]};
-        [tools propertyListWrite:dict forFileName:PLIST_2014_CONTENT];
+        if([self RESTData]){
+            NSDictionary *dict = @{KEY_CONTENT: [self RESTData]};
+            [tools propertyListWrite:dict forFileName:PLIST_2014_CONTENT];
+            NSLog(@"- [WS]: cache was updated");
+        }
     } didFailed:^{
        // nothing...
     }];
@@ -48,11 +50,13 @@
 - (NSInteger) currentStepNumber
 {
     NSInteger number = [self nextStepNumber];
-    return number-1;
+    NSInteger currentStep = number-1;
+    NSLog(@"-[WS]: %i", currentStep);
+    return currentStep;
 }
 - (NSInteger) nextStepNumber
 {
-    NSInteger number = 0;
+    NSInteger number = 1;
     NSArray *steps = [self steps];
     for (NSDictionary *dict in steps)
         if ([[dict objectForKey:KEY_IS_ENDED] isEqualToString:KEY_NO]){
@@ -188,7 +192,8 @@
         NSDictionary *tabDetail = [dict objectForKey:KEY_TABLE_DETAILS];
         //...
         if (tabDetail)
-            if ([[tabDetail objectForKey:KEY_REF] isEqual:[WTV_TYPES objectAtIndex:wtype]])
+            if ([[tabDetail objectForKey:KEY_REF] isEqual:[WTV_TYPES objectAtIndex:wtype]]
+            && tabRows)
                 [mutArr addObject:tabRows];
     }
     

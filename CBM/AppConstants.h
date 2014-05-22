@@ -34,6 +34,9 @@
 #define GOOGLE_ANALYTICS_TRACKER    @""
 #define PARSE_APP_ID                @"fVyVhCs85hpgBuiVmKdQww28uBYxyVNVNa8B673p"
 #define PARSE_APP_SECRET            @"PWxb89bui7GbpEDZrigrPSJTI0clGAiNn2E59W5e"
+#define CRASH_ANALYTICS_KEY         @"48118b9b5992c16c30f272709e02fe01c05ee2d5"
+
+#define APP_RESOURCES               @"AppResources"
 
 /* colors */
 
